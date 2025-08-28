@@ -1,0 +1,67 @@
+export default {
+  login: {
+    email: "dokewy@mailto.plus",
+    password: "Test@123",
+    captcha: "7107x",
+  },
+  personalDetails: {
+    firstName: "Dependra",
+    lastName: "Thapa",
+    firstNameDevanagari: "दिपेन्द्र",
+    lastNameDevanagari: "थापा",
+    dateOfBirthYear: "2003",
+    dateOfBirthDay: "1",
+    gender: "Male",
+    country: "Nepal",
+  },
+  citizenship: {
+    number: "7776123",
+    issuedDistrict: "KATHMANDU",
+    issuedDate: "14",
+  },
+  address: {
+    country: "Nepal",
+    province: "Bagmati Pradesh",
+    district: "KATHMANDU",
+    municipality: "BUDHANILKANTHA MUNICIPALITY",
+    wardNo: "03",
+    tole: "Budhanilkantha",
+    telephone: "017856745",
+  },
+  family: [
+    {
+      fname: "Dipak",
+      lname: "Thapa",
+      fnameNep: "दिपक",
+      lnameNep: "थापा",
+    },
+    {
+      fname: "Chakra",
+      lname: "Thapa",
+      fnameNep: "चक्र",
+      lnameNep: "थापा",
+    },
+    {
+      fname: "Gita",
+      lname: "Thapa",
+      fnameNep: "गीता",
+      lnameNep: "थापा",
+    },
+  ],
+  bank: {
+    bankName: "Kumari Bank Limited",
+    accountNumber: "1890343270300001",
+    accountType: "Current",
+    branch: "Panipokhari Branch",
+  },
+  occupation: {
+    sector: "PRIVATE SECTOR",
+    organization: "DG HUB",
+    address: "Naxal",
+    employeeId: "22454474",
+    designation: "Intern",
+    effectiveDate: "3",
+    financialDetails: "Upto Rs.1,00,000",
+    incomeSource: "Salary", 
+  },
+};
