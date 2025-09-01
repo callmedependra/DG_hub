@@ -64,4 +64,10 @@ export default {
     financialDetails: "Upto Rs.1,00,000",
     incomeSource: "Salary", 
   },
+    invalidLogin: {
+    missingEmail: { email: "", password: "Test@123", captcha: "7107x" },
+    missingPassword: { email: "callmedependra@gmail.com", password: "", captcha: "619v3" },
+    missingCaptcha: { email: "callmedependra@gmail.com", password: "Test@123", captcha: "" },
+    invalidEmailFormat: { email: "dokewy@", password: "Test@123", captcha: "7107x" },
+  },
 };
