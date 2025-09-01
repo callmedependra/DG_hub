@@ -39,16 +39,6 @@ export class LoginPage extends BasePage{
     await this.page.goto('https://newkyc.dghub.io/kyc/login');
   }
 
-  // //  Positive login
-  // async login({ email, password, captcha }) {
-  //   await expect(this.emailInput).toBeVisible();
-  //   await this.emailInput.fill(email);
-  //   await this.passwordInput.fill(password);
-  //   await this.captchaInput.fill(captcha);
-  //   await this.loginBtn.click();
-  //   await this.waitForURL('kyc/home');
-  // }
-
   //  Negative login sequence
   async loginExpectFailSequence(testSteps) {
     for (const step of testSteps) {
@@ -61,5 +51,14 @@ export class LoginPage extends BasePage{
 
       await expect(this.page.getByText(expectedError, { exact: true })).toBeVisible({ timeout: 5000 });
     }
+  }
+  //  Positive login
+  async login({ email, password, captcha }) {
+    await expect(this.emailInput).toBeVisible();
+    await this.emailInput.fill(email);
+    await this.passwordInput.fill(password);
+    await this.captchaInput.fill(captcha);
+    await this.loginBtn.click();
+    await this.waitForURL('kyc/home');
   }
 }

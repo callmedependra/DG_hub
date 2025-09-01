@@ -1,6 +1,61 @@
 import { BasePage } from '../utils/basePage';
 
 export class AddressPage extends BasePage {
+  
+  //  async addressExpectFailSequence(testSteps) {
+  //   for (const step of testSteps) {
+  //     const { country, province, district, municipality, wardNo, tole, telephone, filePath, expectedError } = step;
+
+  //     await this.waitForURL('document-details');
+
+  //     if (country !== undefined) {
+  //       await this.page.getByRole('combobox', { name: 'Country' }).click();
+  //       await this.page.getByRole('option', { name: country }).click();
+  //     }
+
+  //     if (province !== undefined) {
+  //       await this.page.getByRole('combobox', { name: 'Province' }).click();
+  //       await this.page.getByRole('option', { name: province }).click();
+  //     }
+
+  //     if (district !== undefined) {
+  //       await this.page.getByRole('combobox', { name: 'District' }).click();
+  //       await this.page.getByRole('option', { name: district }).click();
+  //     }
+
+  //     if (municipality !== undefined) {
+  //       await this.page.getByRole('combobox', { name: 'Rural Municipality/' }).click();
+  //       await this.page.getByRole('option', { name: municipality }).click();
+  //     }
+
+  //     if (wardNo !== undefined) {
+  //       await this.page.getByRole('textbox', { name: 'Ward No.' }).fill(wardNo);
+  //     }
+
+  //     if (tole !== undefined) {
+  //       await this.page.getByRole('textbox', { name: 'Tole' }).fill(tole);
+  //     }
+
+  //     if (telephone !== undefined) {
+  //       await this.page.getByRole('textbox', { name: 'Telephone No.' }).fill(telephone);
+  //     }
+
+  //     if (filePath) {
+  //       await this.page.locator('input[type="file"]:visible').first().setInputFiles(filePath);
+  //     }
+
+  //     await this.clickNext();
+
+  //     // Check the expected error
+  //     await expect(
+  //       this.page.getByText(expectedError, { exact: true })
+  //     ).toBeVisible({ timeout: 5000 });
+
+  //     // Optional: reset page for next iteration
+  //     await this.page.reload();
+  //   }
+  // }
+
   async fillAddress({ country, province, district, municipality, wardNo, tole, telephone }, filePath) {
     await this.waitForURL('document-details');
 
@@ -26,4 +81,5 @@ export class AddressPage extends BasePage {
     await this.waitForURL('address-details');
     await this.clickConfirm();
   }
+
 }

@@ -5,21 +5,6 @@ import testData from '../utils/testData.js';
 import { LoginPage } from '../pages/login.page.js';
 
 test.describe('@smoke @critical KYC Login', () => {
-  // test('✅ Successful Login', async ({ page }) => {
-  //   const loginPage = new LoginPage(page);
-
-  //   try {
-  //     await loginPage.goto();
-  //     await loginPage.login(testData.login); // from testData.js
-
-  //     // Verify URL or some dashboard element
-  //     await expect(page).toHaveURL(/.*kyc\/home/);
-  //   } catch (error) {
-  //     console.error(' Login test failed:', error);
-  //     throw error;
-  //   }
-  // });
-
   test(' Negative Login Scenarios', async ({ page }) => {
     const loginPage = new LoginPage(page);
 
@@ -48,6 +33,21 @@ test.describe('@smoke @critical KYC Login', () => {
       await loginPage.loginExpectFailSequence(invalidScenarios);
     } catch (error) {
       console.error(' Negative login tests failed:', error);
+      throw error;
+    }
+  });
+
+   test(' Successful Login', async ({ page }) => {
+    const loginPage = new LoginPage(page);
+
+    try {
+      await loginPage.goto();
+      await loginPage.login(testData.login); // from testData.js
+
+      // Verify URL or some dashboard element
+      await expect(page).toHaveURL(/.*kyc\/home/);
+    } catch (error) {
+      console.error(' Login test failed:', error);
       throw error;
     }
   });

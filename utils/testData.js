@@ -1,6 +1,6 @@
 export default {
   login: {
-    email: "dokewy@mailto.plus",
+    email: "dipuuu@allfreemail.net",
     password: "Test@123",
     captcha: "7107x",
   },
@@ -64,10 +64,77 @@ export default {
     financialDetails: "Upto Rs.1,00,000",
     incomeSource: "Salary", 
   },
+
+  //Negative cases data we pass on form.
     invalidLogin: {
     missingEmail: { email: "", password: "Test@123", captcha: "7107x" },
     missingPassword: { email: "callmedependra@gmail.com", password: "", captcha: "619v3" },
     missingCaptcha: { email: "callmedependra@gmail.com", password: "Test@123", captcha: "" },
     invalidEmailFormat: { email: "dokewy@", password: "Test@123", captcha: "7107x" },
   },
+  personalDetails: {
+  firstName: "Dependra",
+  lastName: "Thapa",
+  firstNameDevanagari: "दिपेन्द्र",
+  lastNameDevanagari: "थापा",
+  dateOfBirthYear: "2003",
+  dateOfBirthDay: "1",
+  gender: "Male",
+  country: "Nepal",
+},
+
+invalidPersonalDetails: {
+  missingFirstName: {
+    firstName: "",
+    lastName: "Thapa",
+    firstNameDevanagari: "दिपेन्द्र",
+    lastNameDevanagari: "थापा",
+    dateOfBirthYear: "2003",
+    dateOfBirthDay: "1",
+    gender: "Male",
+    country: "Nepal",
+  },
+  missingLastName: {
+    firstName: "Dependra",
+    lastName: "",
+    firstNameDevanagari: "दिपेन्द्र",
+    lastNameDevanagari: "थापा",
+    dateOfBirthYear: "2003",
+    dateOfBirthDay: "1",
+    gender: "Male",
+    country: "Nepal",
+  },
+  missingDOB: {
+    firstName: "Dependra",
+    lastName: "Thapa",
+    firstNameDevanagari: "दिपेन्द्र",
+    lastNameDevanagari: "थापा",
+    dateOfBirthYear: "",
+    dateOfBirthDay: "",
+    gender: "Male",
+    country: "Nepal",
+  },
+  missingGender: {
+    firstName: "Dependra",
+    lastName: "Thapa",
+    firstNameDevanagari: "दिपेन्द्र",
+    lastNameDevanagari: "थापा",
+    dateOfBirthYear: "2003",
+    dateOfBirthDay: "1",
+    gender: "",
+    country: "Nepal",
+  },
+  missingCountry: {
+    firstName: "Dependra",
+    lastName: "Thapa",
+    firstNameDevanagari: "दिपेन्द्र",
+    lastNameDevanagari: "थापा",
+    dateOfBirthYear: "2003",
+    dateOfBirthDay: "1",
+    gender: "Male",
+    country: "",
+  },
+},
+
+
 };
